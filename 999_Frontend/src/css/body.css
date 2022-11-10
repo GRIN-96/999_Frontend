@@ -1,0 +1,24 @@
+/* 박스 가로정렬 */
+#wrap1::after {
+  content: "";
+  display: block;
+}
+
+/* 아이콘과 홈버튼 box */
+.box1 {
+  background: red;
+  height: 100%;
+}
+
+/* POST 박스 */
+.box2 {
+  background: green;
+  height: 100%;
+  width: 100%;
+}
+
+/* 프로필 정보 박스 */
+.box3 {
+  background: blue;
+  height: 100%;
+}

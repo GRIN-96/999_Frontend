@@ -1,0 +1,8 @@
+/* 메인페이지 하단 바 */
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0px;
+  background: #8ec3b0;
+}
