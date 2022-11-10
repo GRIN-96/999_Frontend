@@ -2,12 +2,12 @@
 #wrap1 {
   position: absolute;
   top: 110px;
-  bottom: 0;
+  bottom: 50px;
   right: 0;
   left: 0;
   display: flex;
 }
-
+/* -----------------------box 1------------------- */
 /* 아이콘과 홈버튼 box */
 .box1 {
   background: white;
@@ -16,12 +16,52 @@
   border-right: 3px solid #8ec3b0;
 }
 
-/* POST 박스 */
+.icon {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------------------box 2-------------------- */
+
+/* POST section 박스 */
 .box2 {
-  background: white;
+  background: green;
   height: 100%;
   width: 60%;
+  padding-top: 15px;
 }
+
+/* display row 형태로 view 만들기 */
+.section_view {
+  width: 90%;
+  height: auto;
+  background: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  display: flex;
+}
+
+/* 게시글 이미지 style */
+.profile_img {
+  margin: 10px;
+  border-radius: 30%;
+}
+
+/* 게시글 정보 */
+.posts {
+  background: purple;
+  width: 100%;
+  padding: 20px;
+}
+
+.post_name {
+  display: flex;
+  column-gap: 15px;
+}
+
+/* ---------------------box 3--------------------- */
 
 /* 프로필 정보 박스 */
 .box3 {
