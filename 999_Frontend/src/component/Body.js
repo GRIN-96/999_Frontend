@@ -9,6 +9,8 @@ const email = "email@email.com";
 const postNum = 0;
 const content =
   "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
+const nickname = "@mingi";
+const date = "1시간";
 
 function Body() {
   return (
@@ -28,9 +30,9 @@ function Body() {
           />
           <div className="posts">
             <div className="post_name">
-              <span>닉네임</span>
-              <span className="post_detail">닉네임</span>
-              <span className="post_detail">date</span>
+              <span>{nickname}</span>
+              <span className="post_detail">{nickname}</span>
+              <span className="post_detail">{date}</span>
             </div>
             <div className="post_content">{content}</div>
             <img className="post_img" src={img1} />
