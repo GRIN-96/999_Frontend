@@ -2,10 +2,13 @@ import React from "react";
 import "../css/body.css";
 import gugu from "../img/gugu.png";
 import mingi from "../img/mingi.jpg";
+import img1 from "../img/sleep.jpeg";
 
 const name = "name";
 const email = "email@email.com";
 const postNum = 0;
+const content =
+  "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
 
 function Body() {
   return (
@@ -26,9 +29,11 @@ function Body() {
           <div className="posts">
             <div className="post_name">
               <span>닉네임</span>
-              <span>닉네임</span>
-              <span>date</span>
+              <span className="post_detail">닉네임</span>
+              <span className="post_detail">date</span>
             </div>
+            <div className="post_content">{content}</div>
+            <img className="post_img" src={img1} />
           </div>
         </section>
       </div>
