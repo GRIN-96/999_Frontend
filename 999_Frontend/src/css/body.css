@@ -26,22 +26,23 @@
 
 /* POST section 박스 */
 .box2 {
-  background: green;
+  background: white;
   height: 100%;
   width: 60%;
   padding-top: 15px;
+  overflow-y: scroll;
 }
 
 /* display row 형태로 view 만들기 */
 .section_view {
   width: 90%;
   height: auto;
-  background: yellow;
+  background: white;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
   display: flex;
-  position: relative;
+  border-bottom: 2px solid black;
 }
 
 /* 게시글 이미지 style */
@@ -52,19 +53,15 @@
 
 /* 게시글 정보 */
 .posts {
-  background: purple;
-  width: auto;
+  background: white;
+  width: 100%;
   padding: 15px;
   font-weight: bold;
   font-size: 15px;
   margin-right: 5px;
-}
-
-/* 태그용 닉네임과 시간정보 */
-.post_detail {
-  font-weight: normal;
-  font-size: 13px;
-  color: gray;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* 정렬 */
@@ -72,20 +69,29 @@
   display: flex;
   column-gap: 15px;
 }
+/* 태그용 닉네임과 시간정보 */
+.post_detail {
+  font-weight: normal;
+  font-size: 13px;
+  color: gray;
+}
 
 /* 게시글 스타일 정보 */
 .post_content {
+  width: 100%;
+  margin-top: 15px;
+  text-align: left;
   text-overflow: ellipsis;
   overflow: hidden;
-  margin-top: 10px;
+  overflow-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
 /* 이미지 크기 조절 */
 .post_img {
-  /* width: auto; */
+  margin-top: 15px;
   max-width: 100%;
   height: auto;
 }

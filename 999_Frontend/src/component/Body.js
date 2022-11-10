@@ -8,7 +8,7 @@ const name = "name";
 const email = "email@email.com";
 const postNum = 0;
 const content =
-  "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
+  "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
 
 function Body() {
   return (
