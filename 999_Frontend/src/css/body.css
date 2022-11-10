@@ -1,5 +1,6 @@
 /* 박스 가로정렬 */
 #wrap1::after {
+  position: absolute;
   content: "";
   display: block;
 }

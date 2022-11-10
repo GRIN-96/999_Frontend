@@ -11,10 +11,3 @@ function Header() {
 }
 
 export default Header;
-
-<div>
-  <div>
-    <input></input>
-    <button></button>
-  </div>
-</div>;
