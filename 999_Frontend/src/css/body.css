@@ -1,25 +1,52 @@
 /* 박스 가로정렬 */
-#wrap1::after {
+#wrap1 {
   position: absolute;
-  content: "";
-  display: block;
+  top: 110px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
 }
 
 /* 아이콘과 홈버튼 box */
 .box1 {
-  background: red;
+  background: white;
   height: 100%;
+  width: 20%;
+  border-right: 3px solid #8ec3b0;
 }
 
 /* POST 박스 */
 .box2 {
-  background: green;
+  background: white;
   height: 100%;
-  width: 100%;
+  width: 60%;
 }
 
 /* 프로필 정보 박스 */
 .box3 {
-  background: blue;
+  background: white;
   height: 100%;
+  width: 20%;
+  border-left: 3px solid #8ec3b0;
+}
+
+.my_profile {
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.profile_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15px;
+  line-height: 0.1;
+}
+
+.item {
+  font-size: 32px;
+  text-align: left;
 }
