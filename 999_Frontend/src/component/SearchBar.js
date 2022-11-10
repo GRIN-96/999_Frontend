@@ -9,7 +9,7 @@ function SearchBar() {
           <input className="searchBar" name="SearchBar"></input>
         </div>
         <div className="item2">
-          <button>
+          <button className="magBtn">
             <img
               className="magGlass"
               src="https://cdn-icons-png.flaticon.com/512/2120/2120967.png"
@@ -19,19 +19,6 @@ function SearchBar() {
         </div>
       </div>
     </div>
-    // <div className="searchDiv">
-    //   <div id="search">
-    //     <input className="searchBar" name="SearchBar"></input>
-    //     <img
-    //       className="magGlass"
-    //       src="https://cdn-icons-png.flaticon.com/512/2120/2120967.png"
-    //       alt="magGlass"
-    //     ></img>
-    //   </div>
-    //   <div>
-    //     <button className="searchBtn">Search</button>
-    //   </div>
-    // </div>
   );
 }
 

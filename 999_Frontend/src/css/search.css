@@ -39,3 +39,9 @@
   width: 30px;
   height: 30px;
 }
+
+/* 버튼 스타일변경 */
+.magBtn {
+  background-color: white;
+  border: none;
+}

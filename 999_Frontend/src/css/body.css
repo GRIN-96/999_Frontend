@@ -13,6 +13,7 @@
   background: white;
   height: 100%;
   width: 20%;
+  border-right: 3px solid #8ec3b0;
 }
 
 .icon {
@@ -67,4 +68,25 @@
   background: white;
   height: 100%;
   width: 20%;
+  border-left: 3px solid #8ec3b0;
+}
+
+.my_profile {
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+}
+
+.profile_info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 15px;
+  line-height: 0.1;
+}
+
+.item {
+  font-size: 32px;
+  text-align: left;
 }
