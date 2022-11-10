@@ -5,10 +5,10 @@ function SearchBar() {
   return (
     <div className="searchDiv">
       <div id="search">
-        <div>
+        <div className="item1">
           <input className="searchBar" name="SearchBar"></input>
         </div>
-        <div>
+        <div className="item2">
           <button>
             <img
               className="magGlass"
