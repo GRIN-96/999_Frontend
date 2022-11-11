@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "../css/search.css";
 import axios from "axios";
 
-function SearchBar({ setSearchPost }) {
+function SearchBar() {
   const [text, setText] = useState("");
   const [data, setData] = useState("");
 
@@ -18,8 +18,7 @@ function SearchBar({ setSearchPost }) {
       .get("/api/searchController", {
         params: { inputText: text },
       })
-      .then((response) => setSearchPost(JSON.parse(response.data.postList)));
-    // .then((response) => setData(response.data.postList));
+      .then((response) => setData(response.data.postList));
 
     console.log(data);
   };

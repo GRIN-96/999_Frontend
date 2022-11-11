@@ -10,6 +10,7 @@ function Post_section({ n_name, content, date, img }) {
   const imgs = [img1, img2, img3, img4, img5, img6];
   const idx = Math.floor(Math.random() * 6);
   console.log(n_name, content, date, img);
+
   return (
     <section className="section_view">
       <img className="profile_img" src={img} width="100px" height="100px" />
