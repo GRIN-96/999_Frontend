@@ -4,12 +4,6 @@ import mingi from "../img/mingi.jpg";
 import img1 from "../img/sleep.jpeg";
 
 function Post_section({ n_name, content, date }) {
-  //   const name = "name";
-  //   const email = "email@email.com";
-  //   const postNum = 0;
-  //   const content =
-  //     "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
-
   return (
     <section className="section_view">
       <img className="profile_img" src={mingi} width="100px" height="100px" />
