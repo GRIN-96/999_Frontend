@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { axiosData } from "../api/Users";
+import { Link, Route, Router } from "react-router-dom";
+import { axiosData, axiosUsers } from "../api/Users";
 import "../css/body.css";
 import gugu from "../img/gugu.png";
 import mingi from "../img/mingi.jpg";
@@ -30,7 +31,7 @@ function Body() {
   // User data 가져오기
   // useEffect는 페이지가 실행되면 가장 먼저 실행되는 부분!!
   useEffect(() => {
-    const data = axiosData();
+    const data = axiosUsers();
 
     data.then((data) => setUser(JSON.parse(data.user)));
   }, []);
@@ -43,15 +44,23 @@ function Body() {
     <div id="wrap1">
       <div className="box1">
         <div className="icon">
-          <img src={gugu} width="100px" height="100px" />
+          <img
+            onClick={() => {
+              document.location.href = "/Main";
+            }}
+            src={gugu}
+            width="100px"
+            height="100px"
+          />
         </div>
-        {/* <Router>
-          <div>
-            <Link to="/Main">Main</Link>
-            <Route path="/" element={<Main />} />
-            <Route exact path="/" element={<Main />} />
-          </div>
-        </Router> */}
+        <button
+          className="home_btn"
+          onClick={() => {
+            document.location.href = "/Main";
+          }}
+        >
+          HOME
+        </button>
       </div>
       <div className="box2">
         <div>
