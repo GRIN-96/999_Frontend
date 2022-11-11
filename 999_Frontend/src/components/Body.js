@@ -37,7 +37,7 @@ function Body() {
   }, []);
 
   const [user, setUser] = useState({});
-  console.log(user);
+  const img = user.userMbti;
 
   return (
     // body 를 구성하는 3개의 박스를 하나의 div (id="wrap1")으로 감쌌다.
@@ -66,13 +66,17 @@ function Body() {
         <div>
           {userList.map((user) => (
             <Post_section
+              // key={}
               n_name={user.userId}
               content={user.postContents}
               date={user.postDate}
+              img={img}
             />
           ))}
         </div>
       </div>
+
+      {/* collection view 중 3번째에 해당하는 부분이다. */}
       <div className="box3">
         <img className="my_profile" src={mingi} alt="profile"></img>
         <div className="profile_info">
@@ -100,6 +104,8 @@ function Body() {
             ></img>
             Post #: {user.userPostCnt}
           </p>
+
+          <button className="add_posts">+</button>
         </div>
       </div>
     </div>
