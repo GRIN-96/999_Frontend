@@ -44,7 +44,7 @@
   margin-right: auto;
   padding: 5px;
   display: flex;
-  position: relative;
+  border-bottom: 2px solid black;
 }
 
 /* 게시글 이미지 style */
@@ -79,13 +79,19 @@
   display: flex;
   column-gap: 15px;
 }
+/* 태그용 닉네임과 시간정보 */
+.post_detail {
+  font-weight: normal;
+  font-size: 13px;
+  color: gray;
+}
 
 /* 게시글 스타일 정보 */
 .post_content {
   width: 100%;
   margin-top: 15px;
-  text-overflow: ellipsis;
   text-align: left;
+  text-overflow: ellipsis;
   overflow: hidden;
   overflow-wrap: break-word;
   display: -webkit-box;
