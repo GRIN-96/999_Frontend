@@ -11,7 +11,7 @@ const Modal = (props) => {
       {open ? (
         <section>
           <header>
-            {header}
+            {header} Page
             <button className="close" onClick={close}>
               &times;
             </button>

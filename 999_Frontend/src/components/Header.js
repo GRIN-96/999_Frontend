@@ -17,15 +17,12 @@ function Header() {
   return (
     <div className="header">
       <button className="signup-btn">Sign-Up</button>
-      <button className="login-btn">Login</button>
 
       <React.Fragment>
         <button className="login-btn" onClick={openModal}>
           Login
         </button>
-        <Modal open={modalOpen} close={closeModal} header="Modal heading">
-          Enter e-mail address Enter password
-        </Modal>
+        <Modal open={modalOpen} close={closeModal} header="Login"></Modal>
       </React.Fragment>
     </div>
   );
