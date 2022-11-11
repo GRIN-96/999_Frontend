@@ -7,12 +7,12 @@ import SearchBar from "../components/SearchBar";
 function Main() {
   return (
     <div className="Main">
-      <body>
+      <div>
         <Header />
         <SearchBar />
         <Body />
         <Footer />
-      </body>
+      </div>
     </div>
   );
 }
