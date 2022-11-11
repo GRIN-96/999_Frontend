@@ -80,11 +80,11 @@ function Body({ searchPost }) {
         <div>
           {posts.map((post) => (
             <Post_section
-              // key={}
+              key={post.postId}
               n_name={post.userId}
               content={post.postContents}
               date={post.postDate}
-              img={img}
+              users={users}
             />
           ))}
         </div>

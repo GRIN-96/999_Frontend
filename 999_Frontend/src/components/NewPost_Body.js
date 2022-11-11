@@ -18,7 +18,7 @@ function Body() {
   }, []);
 
   const [user, setUser] = useState({});
-  console.log(user);
+  // console.log(user);
 
   const [login, setLogin] = useState(false);
 

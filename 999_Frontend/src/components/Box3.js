@@ -17,7 +17,7 @@ function Box3() {
   }, []);
 
   const [user, setUser] = useState({});
-  console.log(user);
+  // console.log(user);
 
   return (
     <div className="box3">

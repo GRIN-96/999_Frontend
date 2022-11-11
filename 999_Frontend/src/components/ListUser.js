@@ -11,7 +11,7 @@ function ListUser() {
   }, []);
 
   const [user, setUser] = useState({});
-  console.log(user);
+  // console.log(user);
 
   return (
     <div>
