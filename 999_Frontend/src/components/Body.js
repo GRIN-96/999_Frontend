@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
 import { axiosUsers } from "../api/Users";
 import "../css/body.css";
 import gugu from "../img/gugu.png";
@@ -7,12 +6,6 @@ import mingi from "../img/mingi.jpg";
 import img1 from "../img/sleep.jpeg";
 import Main from "../pages/Main";
 import Post_section from "./Post_section";
-
-const name = "name";
-const email = "email@email.com";
-const postNum = 0;
-const content =
-  "contentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontentcontent";
 
 function Body() {
   const userList = [
@@ -49,14 +42,22 @@ function Body() {
     <div id="wrap1">
       <div className="box1">
         <div className="icon">
-          <img src={gugu} width="100px" height="100px" />
+          <img
+            onClick={() => {
+              document.location.href = "/Main";
+            }}
+            src={gugu}
+            width="100px"
+            height="100px"
+          />
         </div>
         <button
+          className="home_btn"
           onClick={() => {
             document.location.href = "/Main";
           }}
         >
-          Home
+          HOME
         </button>
       </div>
       <div className="box2">

@@ -142,3 +142,12 @@
   height: 20px;
   margin-right: 5px;
 }
+
+/* --------------------button---------------------- */
+
+.home_btn {
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  font-weight: bold;
+}
