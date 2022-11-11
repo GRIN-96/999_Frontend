@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "./Modal";
+import "../css/modal.css";
 import "../css/header.css";
 
 function Header() {
+  // useState를 사용하여 open상태를 변경한다. (open일때 true로 만들어 열리는 방식)
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <div className="header">
-      <button
-        className="login-btn"
-        onClick={() => {
-          document.location.href = "/Login";
-        }}
-      >
-        Login
-      </button>
       <button className="signup-btn">Sign-Up</button>
+      <button className="login-btn">Login</button>
+
+      <React.Fragment>
+        <button className="login-btn" onClick={openModal}>
+          Login
+        </button>
+        <Modal open={modalOpen} close={closeModal} header="Modal heading">
+          Enter e-mail address Enter password
+        </Modal>
+      </React.Fragment>
     </div>
   );
 }
