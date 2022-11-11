@@ -1,0 +1,12 @@
+[
+  {
+    "userId": "456@naver.com",
+    "postContents": "두 번째 게시글 입니다.",
+    "postDate": "2022-11-11 09:47:19"
+  },
+  {
+    "userId": "789@naver.com",
+    "postContents": "세 번째 게시글 입니다.",
+    "postDate": "2022-11-11 09:47:19"
+  }
+]

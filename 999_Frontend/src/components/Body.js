@@ -4,6 +4,7 @@ import "../css/body.css";
 import gugu from "../img/gugu.png";
 import mingi from "../img/mingi.jpg";
 import img1 from "../img/sleep.jpeg";
+import Main from "../pages/Main";
 import Post_section from "./Post_section";
 
 const name = "name";
@@ -44,6 +45,13 @@ function Body() {
         <div className="icon">
           <img src={gugu} width="100px" height="100px" />
         </div>
+        {/* <Router>
+          <div>
+            <Link to="/Main">Main</Link>
+            <Route path="/" element={<Main />} />
+            <Route exact path="/" element={<Main />} />
+          </div>
+        </Router> */}
       </div>
       <div className="box2">
         <div>
