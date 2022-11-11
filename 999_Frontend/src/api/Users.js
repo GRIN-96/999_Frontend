@@ -11,6 +11,7 @@ import axios from "axios";
 // 서버에서 데이터 불러오기 - GET
 export const axiosUsers = async () => {
   const response = await axios.get("/api/userController");
+  console.log(response.data);
   return response.data;
 };
 
