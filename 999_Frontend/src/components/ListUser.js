@@ -1,13 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { axiosData } from "../api/Users";
+import { axiosUsers } from "../api/Users";
 
 function ListUser() {
   //
   useEffect(() => {
-    const data = axiosData();
+    const data = axiosUsers();
 
-    data.then((data) => setUser(JSON.parse(data.user)));
+    data.then((data) => setUser(JSON.parse(data.user))); // json으로 받아온 값을 user로 재정의
   }, []);
 
   const [user, setUser] = useState({});

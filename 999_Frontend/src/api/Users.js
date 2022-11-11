@@ -9,7 +9,7 @@ import axios from "axios";
 // 설치 후 import axios from 'axios';
 
 // 서버에서 데이터 불러오기 - GET
-export const axiosData = async () => {
+export const axiosUsers = async () => {
   const response = await axios.get("/api/userController");
   return response.data;
 };
