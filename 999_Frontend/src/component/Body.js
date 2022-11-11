@@ -44,9 +44,30 @@ function Body() {
       <div className="box3">
         <img className="my_profile" src={mingi} alt="profile"></img>
         <div className="profile_info">
-          <p className="item">{name}</p>
-          <p className="item">{email}</p>
-          <p className="item">Post #: {postNum}</p>
+          <p className="item">
+            <img
+              className="box3_icon"
+              src="https://cdn-icons-png.flaticon.com/512/2354/2354573.png"
+              alt="mail"
+            ></img>
+            {user.userNickname}
+          </p>
+          <p className="item">
+            <img
+              className="box3_icon"
+              src="https://cdn-icons-png.flaticon.com/512/646/646094.png"
+              alt="mail"
+            ></img>
+            {user.userEmail}
+          </p>
+          <p className="item">
+            <img
+              className="box3_icon"
+              src="https://cdn-icons-png.flaticon.com/512/3024/3024608.png"
+              alt="post"
+            ></img>
+            Post #: {user.userPostCnt}
+          </p>
         </div>
       </div>
     </body>
