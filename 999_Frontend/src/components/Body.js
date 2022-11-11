@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { axiosUsers } from "../api/Users";
+import { axiosUsers, axiosAllUsers } from "../api/Users";
+import { axiosPosts } from "../api/Posts";
 import "../css/body.css";
 import gugu from "../img/gugu.png";
 import mingi from "../img/mingi.jpg";
@@ -9,29 +10,25 @@ import Post_section from "./Post_section";
 import Box3 from "./Box3";
 
 function Body() {
-  const userList = [
-    {
-      userId: "456@naver.com",
-      postContents: "두 번째 게시글 입니다.",
-      postDate: "2022-11-11 09:47:19",
-    },
-    {
-      userId: "789@naver.com",
-      postContents: "세 번째 게시글 입니다.",
-      postDate: "2022-11-11 09:47:19",
-    },
-  ];
-
   // User data 가져오기
   // useEffect는 페이지가 실행되면 가장 먼저 실행되는 부분!!
   useEffect(() => {
     const data = axiosUsers();
+    const postData = axiosPosts();
+    const allUsers = axiosAllUsers();
 
     data.then((data) => setUser(JSON.parse(data.user)));
+    allUsers.then((allUsers) => setUsers(JSON.parse(allUsers.users)));
+    postData.then((postData) => setPosts(JSON.parse(postData.postList)));
+    // console.log(postData);
   }, []);
 
   const [user, setUser] = useState({});
-  const img = user.userMbti;
+  const [users, setUsers] = useState({});
+  const [posts, setPosts] = useState([]);
+  // console.log(user);
+  // console.log(posts);
+  // console.log(users);
 
   const [login, setLogin] = useState(false);
 
@@ -64,13 +61,13 @@ function Body() {
       </div>
       <div className="box2">
         <div>
-          {userList.map((user) => (
+          {posts.map((post) => (
             <Post_section
-              // key={}
-              n_name={user.userId}
-              content={user.postContents}
-              date={user.postDate}
-              img={img}
+              key={post.postId}
+              n_name={post.userId}
+              content={post.postContents}
+              date={post.postDate}
+              users={users}
             />
           ))}
         </div>
@@ -78,7 +75,7 @@ function Body() {
 
       {/* collection view 중 3번째에 해당하는 부분이다. */}
       <div className="box3">
-        <img className="my_profile" src={mingi} alt="profile"></img>
+        <img className="my_profile" src={user.userMbti} alt="profile"></img>
         <div className="profile_info">
           <p className="item">
             <img
@@ -104,8 +101,6 @@ function Body() {
             ></img>
             Post #: {user.userPostCnt}
           </p>
-
-          <button className="add_posts">+</button>
         </div>
         <button
           className="add_posts"
