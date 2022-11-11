@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { axiosData } from "../api/Users";
+import { BrowserRouter, Link, Route, Router, Routes } from "react-router-dom";
+import { axiosUsers } from "../api/Users";
 import "../css/body.css";
 import gugu from "../img/gugu.png";
 import mingi from "../img/mingi.jpg";
@@ -30,13 +31,18 @@ function Body() {
   // User data 가져오기
   // useEffect는 페이지가 실행되면 가장 먼저 실행되는 부분!!
   useEffect(() => {
-    const data = axiosData();
+    const data = axiosUsers();
 
     data.then((data) => setUser(JSON.parse(data.user)));
   }, []);
 
   const [user, setUser] = useState({});
   console.log(user);
+
+  const [ login, setLogin ] = useState();
+  onToggle = () => {
+    setLogin(!login);
+  }
 
   return (
     // body 를 구성하는 3개의 박스를 하나의 div (id="wrap1")으로 감쌌다.
@@ -45,13 +51,13 @@ function Body() {
         <div className="icon">
           <img src={gugu} width="100px" height="100px" />
         </div>
-        {/* <Router>
-          <div>
-            <Link to="/Main">Main</Link>
-            <Route path="/" element={<Main />} />
-            <Route exact path="/" element={<Main />} />
-          </div>
-        </Router> */}
+        <button
+          onClick={() => {
+            document.location.href = "/Main";
+          }}
+        >
+          Home
+        </button>
       </div>
       <div className="box2">
         <div>
@@ -64,7 +70,7 @@ function Body() {
           ))}
         </div>
       </div>
-      <div className="box3">
+      {onLogin && <div className="box3">
         <img className="my_profile" src={mingi} alt="profile"></img>
         <div className="profile_info">
           <p className="item">
@@ -93,7 +99,7 @@ function Body() {
           </p>
         </div>
       </div>
-    </div>
+    </div>}
   );
 }
 
