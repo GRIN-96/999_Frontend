@@ -21,23 +21,25 @@ function Body() {
         </div>
       </div>
       <div className="box2">
-        <section className="section_view">
-          <img
-            className="profile_img"
-            src={mingi}
-            width="100px"
-            height="100px"
-          />
-          <div className="posts">
-            <div className="post_name">
-              <span>{nickname}</span>
-              <span className="post_detail">{nickname}</span>
-              <span className="post_detail">{date}</span>
+        <script>
+          <section className="section_view">
+            <img
+              className="profile_img"
+              src={mingi}
+              width="100px"
+              height="100px"
+            />
+            <div className="posts">
+              <div className="post_name">
+                <span>{nickname}</span>
+                <span className="post_detail">{nickname}</span>
+                <span className="post_detail">{date}</span>
+              </div>
+              <div className="post_content">{content}</div>
+              <img className="post_img" src={img1} />
             </div>
-            <div className="post_content">{content}</div>
-            <img className="post_img" src={img1} />
-          </div>
-        </section>
+          </section>
+        </script>
       </div>
       <div className="box3">
         <img className="my_profile" src={mingi} alt="profile"></img>
