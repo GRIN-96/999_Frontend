@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import ListUser from "./components/ListUser";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
+import NewPost from "./pages/NewPost";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/ListUSer" element={<ListUser />} />
           <Route path="/Main" element={<Main />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/NewPost" element={<NewPost />} />
         </Routes>
       </BrowserRouter>
     </div>
