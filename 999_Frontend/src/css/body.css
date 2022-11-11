@@ -183,8 +183,9 @@
 }
 
 .item {
-  font-size: 24px;
+  font-size: 20px;
   text-align: left;
+  font-weight: bold;
 }
 
 .box3_icon {
