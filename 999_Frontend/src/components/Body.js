@@ -16,10 +16,15 @@ function Body({ searchPost }) {
   // const location = useLocation();
   // console.log(location);
   // const searchPost = location.state.data;
-  console.log(searchPost);
+  // console.log(searchPost);
 
   // User data 가져오기
   // useEffect는 페이지가 실행되면 가장 먼저 실행되는 부분!!
+
+  const [user, setUser] = useState({});
+  const [users, setUsers] = useState({});
+  const [posts, setPosts] = useState([]);
+
   useEffect(() => {
     const data = axiosUsers();
     // const postData = axiosPosts();
@@ -45,15 +50,11 @@ function Body({ searchPost }) {
     } else {
       // id가 없을때
       postData = axiosPosts();
-      postData.then((postData) => setPosts(JSON.parse(postData.postList)));
+      postData.then((postData) => setPosts(JSON.parse(postData.joinPostList)));
     }
 
     // console.log(postData);
   }, [searchPost]);
-
-  const [user, setUser] = useState({});
-  const [users, setUsers] = useState({});
-  const [posts, setPosts] = useState([]);
 
   // console.log("LOOK HERE : ", searchPost);
   // if (searchPost !== "") {
@@ -102,10 +103,11 @@ function Body({ searchPost }) {
           {posts.map((post) => (
             <Post_section
               key={post.postId}
-              n_name={post.userId}
+              nickname={post.userNickname}
               content={post.postContents}
               date={post.postDate}
-              users={users}
+              profile={post.userMbti}
+              email={post.userEmail}
             />
           ))}
         </div>

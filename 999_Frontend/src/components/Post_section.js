@@ -12,7 +12,7 @@ import img10 from "../img/포장마차.gif";
 import img11 from "../img/cat.jpg";
 import img12 from "../img/img.jpg";
 
-function Post_section({ n_name, content, date, users }) {
+function Post_section({ nickname, content, email, profile, date }) {
   const imgs = [
     img1,
     img2,
@@ -28,31 +28,26 @@ function Post_section({ n_name, content, date, users }) {
     img12,
   ];
 
-  function search() {
-    for (let i = 0; i < users.length; i++) {
-      if (users[i].userEmail === n_name) {
-        console.log(users[i]);
-        return users[i];
-      }
-    }
-  }
+  // function search() {
+  //   for (let i = 0; i < users.length; i++) {
+  //     if (users[i].userEmail === n_name) {
+  //       console.log(users[i]);
+  //       return users[i];
+  //     }
+  //   }
+  // }
 
-  let profile_search = search();
+  // let profile_search = search();
 
   const idx = Math.floor(Math.random() * 12);
   //   console.log(n_name, content, date, img);
   return (
     <section className="section_view">
-      <img
-        className="profile_img"
-        src={profile_search.userMbti}
-        width="100px"
-        height="100px"
-      />
+      <img className="profile_img" src={profile} width="100px" height="100px" />
       <div className="posts">
         <div className="post_name">
-          <span>{profile_search.userNickname}</span>
-          <span className="post_detail">@{n_name}</span>
+          <span>{nickname}</span>
+          <span className="post_detail">@{email}</span>
           <span className="post_detail">{date}</span>
         </div>
         <div className="post_content">{content}</div>

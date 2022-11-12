@@ -10,16 +10,18 @@ import axios from "axios";
 
 // 서버에서 데이터 불러오기 - GET
 export const axiosPosts = async () => {
-  const params = { command: "allPost" };
+  const params = { command: "joinPost" };
   const response = await axios.get("/api/postController", { params });
-  console.log(response.data);
+  //   console.log(response.data);
   return response.data;
 };
 
 export const axiosUserPosts = async (userId) => {
   console.log("axiosUserPosts ID CHECK : ", userId);
-  const params = { command: "postByname", user: userId };
-  const response = await axios.get("/api/postController", { params });
+  //   const params = { command: "postByname", user: userId };
+  const response = await axios.get("/api/postController", {
+    params: { command: "postByname", user: userId },
+  });
   console.log("axiosUserPosts 조회 : ", response.data);
   return response.data;
 };
