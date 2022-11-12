@@ -3,14 +3,18 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Body from "../components/Body";
 import SearchBar from "../components/SearchBar";
+import { useState } from "react";
 
 function Main() {
+  const [searchPost, setSearchPost] = useState("");
+  console.log("MAIN ID : ", searchPost);
+
   return (
     <div className="Main">
       <div>
         <Header />
-        <SearchBar />
-        <Body />
+        <SearchBar setSearchPost={setSearchPost} />
+        <Body searchPost={searchPost} />
         <Footer />
       </div>
     </div>
