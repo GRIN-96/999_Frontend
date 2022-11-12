@@ -18,8 +18,10 @@ export const axiosPosts = async () => {
 
 export const axiosUserPosts = async (userId) => {
   console.log("axiosUserPosts ID CHECK : ", userId);
-  const params = { command: "postByname", user: userId };
-  const response = await axios.get("/api/postController", { params });
+  //   const params = { command: "postByname", user: userId };
+  const response = await axios.get("/api/postController", {
+    params: { command: "postByname", user: userId },
+  });
   console.log("axiosUserPosts 조회 : ", response.data);
   return response.data;
 };
