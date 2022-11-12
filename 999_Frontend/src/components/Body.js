@@ -16,18 +16,19 @@ function Body() {
     const data = axiosUsers();
     const postData = axiosPosts();
     const allUsers = axiosAllUsers();
+    console.log("하이하이" + postData);
 
     data.then((data) => setUser(JSON.parse(data.user)));
-    allUsers.then((allUsers) => setUsers(JSON.parse(allUsers.users)));
-    postData.then((postData) => setPosts(JSON.parse(postData.postList)));
-    // console.log(postData);
+    // allUsers.then((allUsers) => setUsers(JSON.parse(allUsers.users)));
+    postData.then((postData) => setPosts(JSON.parse(postData.joinPostList)));
+    console.log(postData);
   }, []);
 
   const [user, setUser] = useState({});
-  const [users, setUsers] = useState({});
+  // const [users, setUsers] = useState({});
   const [posts, setPosts] = useState([]);
   // console.log(user);
-  // console.log(posts);
+  // console.log("제발요" + posts);
   // console.log(users);
 
   const [login, setLogin] = useState(false);
@@ -63,11 +64,12 @@ function Body() {
         <div>
           {posts.map((post) => (
             <Post_section
-              key={post.postId}
-              n_name={post.userId}
+              // key={post.postId}
+              nickname={post.userNickname}
               content={post.postContents}
               date={post.postDate}
-              users={users}
+              profile={post.userMbti}
+              email={post.userEmail}
             />
           ))}
         </div>
