@@ -13,15 +13,15 @@ function SearchBar({ setSearchPost }) {
 
   const submit = (e) => {
     e.preventDefault();
+    setSearchPost(text);
+    // axios
+    //   .get("/api/searchController", {
+    //     params: { inputText: text },
+    //   })
+    //   .then((response) => setSearchPost(response.data.postList));
+    // // .then((response) => setData(response.data.postList));
 
-    axios
-      .get("/api/searchController", {
-        params: { inputText: text },
-      })
-      .then((response) => setSearchPost(JSON.parse(response.data.postList)));
-    // .then((response) => setData(response.data.postList));
-
-    console.log(data);
+    console.log("SEARCHBAR : ", text);
   };
 
   return (

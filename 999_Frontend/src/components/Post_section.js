@@ -12,7 +12,7 @@ import img10 from "../img/포장마차.gif";
 import img11 from "../img/cat.jpg";
 import img12 from "../img/img.jpg";
 
-function Post_section({ n_name, content, date, img, users }) {
+function Post_section({ n_name, content, date, users }) {
   const imgs = [
     img1,
     img2,

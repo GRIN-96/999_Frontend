@@ -16,6 +16,14 @@ export const axiosPosts = async () => {
   return response.data;
 };
 
+export const axiosUserPosts = async (userId) => {
+  console.log("axiosUserPosts ID CHECK : ", userId);
+  const params = { command: "postByname", user: userId };
+  const response = await axios.get("/api/postController", { params });
+  console.log("axiosUserPosts 조회 : ", response.data);
+  return response.data;
+};
+
 // 서버로 데이터 보내주기 - POST
 // export const axiosSendData = async () => {
 //   const response = await axios.post("/api/userController", axiosData);

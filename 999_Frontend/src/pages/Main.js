@@ -6,7 +6,8 @@ import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 
 function Main() {
-  const [searchPost, setSearchPost] = useState([]);
+  const [searchPost, setSearchPost] = useState("");
+  console.log("MAIN ID : ", searchPost);
 
   return (
     <div className="Main">
